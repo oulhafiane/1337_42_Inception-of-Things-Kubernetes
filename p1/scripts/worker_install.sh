@@ -2,7 +2,7 @@
 
 current_ip="192.168.42.111"
 server_ip="192.168.42.110"
-server_host="login1S"
+server_host="ramoukhaS"
 
 mkdir ~/.ssh
 

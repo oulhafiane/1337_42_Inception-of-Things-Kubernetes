@@ -1,8 +1,8 @@
 IMAGE = "centos/8"
 MEM = 1024
 CPU = 1
-MASTER_NAME = "login1S"
-WORKER_NAME = "login2SW"
+MASTER_NAME = "ramoukhaS"
+WORKER_NAME = "zoulhafiSW"
 MASTER_IP = "192.168.42.110"
 WORKER_IP = "192.168.42.111"
 
