@@ -11,7 +11,7 @@ if [ "$1" = "password" ];
 fi
 
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get install -y \
     ca-certificates \
     curl \
     gnupg \
@@ -35,7 +35,7 @@ alias k="sudo /usr/local/bin/kubectl"
 #https://k3d.io/v5.1.0/
 
 sudo wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
-sudo k3d cluster create mycluster -p "443:443@loadbalancer" -p "8888:8888@loadbalancer" --k3s-server-arg '--no-deploy=traefik'
+sudo k3d cluster create mycluster -p "443:443@loadbalancer" -p "8888:8888@loadbalancer" --k3s-arg "--disable=traefik@server:0"
 
 #INSTALL ARGO CD
 sudo kubectl create namespace argocd
