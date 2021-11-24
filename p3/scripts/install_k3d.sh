@@ -35,10 +35,9 @@ alias k="sudo /usr/local/bin/kubectl"
 #https://k3d.io/v5.1.0/
 
 sudo wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
-sudo k3d cluster create mycluster -p "443:443@loadbalancer" -p "8888:8888@loadbalancer"
+sudo k3d cluster create mycluster -p "443:443@loadbalancer" -p "8888:8888@loadbalancer" --k3s-server-arg '--no-deploy=traefik'
 
 #INSTALL ARGO CD
 sudo kubectl create namespace argocd
 sudo kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 sudo kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
-sudo kubectl apply -n argocd -f ingress-argocd.yaml 
