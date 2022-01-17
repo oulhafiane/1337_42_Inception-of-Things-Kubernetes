@@ -1,6 +1,8 @@
 [![42 Profile Card](https://1337-readme.vercel.app/api/profile?cursus=42cursus&login=zoulhafi)](https://github.com/mohouyizme/1337-readme)
 
-# 1337-42-Inception-of-Things-Kubernetes
+# Container Orchestration using Kubernetes 
+
+Inception-Of-Things is a school project helps to learn container orchestration and continuous integration.  
 
 This project aims to deepen your knowledge by making you use K3d and K3s with Vagrant.  
 You will learn how to set up a personal virtual machine with Vagrant and CentOS.  
